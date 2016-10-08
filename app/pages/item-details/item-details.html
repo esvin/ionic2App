@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Item Details</ion-title>
+</ion-navbar>
+
+<ion-content>
+ <div *ngIf="selectedItem" class="selection">
+    <b>{{selectedItem.title}}</b>
+    <ion-icon name="{{selectedItem.icon}}"></ion-icon>
+    <div>
+      You navigated here from <b>{{selectedItem.title}}</b>
+    </div>
+  </div>
+    <button block (click)="openActionShit()">
+        Mostrar Action Shit
+    </button>
+    <button block (click) = "openAlert()">Alertas</button>
+    <button block (click) = "openButton()">Botones</button>
+    <button block (click) = "openCards()">Cards</button>
+
+</ion-content>
